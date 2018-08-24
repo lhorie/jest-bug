@@ -1,0 +1,33 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "jest": "23.5.0",
+    "is-browser": "2.0.1"
+  },
+  "jest": {
+    "projects": [
+      {
+        "displayName": "browser",
+        "browser": true,
+        "testEnvironment": "jsdom",
+        "testPathIgnorePatterns": [
+          ".*\\.node\\.js"
+        ]
+      },
+      {
+        "displayName": "node",
+        "browser": false,
+        "testEnvironment": "node",
+        "testPathIgnorePatterns": [
+          ".*\\.browser\\.js"
+        ]
+      }
+    ]
+  }
+}
